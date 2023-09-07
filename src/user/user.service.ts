@@ -18,7 +18,7 @@ export class UserService {
    * Create a new user
    *
    * @param {CreateUserDto} createUserDto
-   * @return {*}  {Promise<User>}
+   * @return {*}  {Promise<UserEntity>}
    * @memberof UserService
    */
   async createUser(createUserDto: CreateUserDto): Promise<UserEntity> {
@@ -27,6 +27,7 @@ export class UserService {
 
     return this.userRepository.save({
       ...createUserDto,
+      typeUser: 1,
       password: hashedPassword,
     });
   }
@@ -34,7 +35,7 @@ export class UserService {
   /**
    * Get all users
    *
-   * @return {*}  {Promise<User[]>}
+   * @return {*}  {Promise<UserEntity[]>}
    * @memberof UserService
    */
   async getAllUsers(): Promise<UserEntity[]> {
