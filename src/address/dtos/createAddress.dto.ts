@@ -1,9 +1,10 @@
 import { AddressEntity } from '../entities/address.entity';
 
-export class ReturnAddressDto {
+export class CreateAddressDto {
   complement: string;
   numberAddress: number;
   cep: string;
+  cityId: number;
 
   constructor(address: AddressEntity) {
     this.complement = address.complement;

@@ -1,16 +1,16 @@
-import { IsInt, IsOptional, IsString } from 'class-validator';
+import { ReturnCityDto } from 'src/city/dtos/returnCity.dto';
+import { AddressEntity } from '../entities/address.entity';
 
-export class CreateAddressDto {
-  @IsString()
-  @IsOptional()
+export class ReturnAddressDto {
   complement: string;
-
-  @IsInt()
   numberAddress: number;
-
-  @IsString()
   cep: string;
+  city?: ReturnCityDto;
 
-  @IsInt()
-  cityId: number;
+  constructor(address: AddressEntity) {
+    this.complement = address.complement;
+    this.numberAddress = address.numberAddress;
+    this.cep = address.cep;
+    this.city = address.city ? new ReturnCityDto(address.city) : undefined;
+  }
 }
