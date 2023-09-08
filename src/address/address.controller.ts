@@ -1,3 +1,4 @@
+import { CreateAddressDto } from './dtos/returnAddress.dto';
 import {
   Body,
   Controller,
@@ -7,7 +8,6 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { AddressService } from './address.service';
-import { CreateAddressDto } from './dtos/createAddress.dto';
 
 @Controller('address')
 export class AddressController {

@@ -1,9 +1,9 @@
+import { CreateAddressDto } from './dtos/returnAddress.dto';
 import { CityService } from './../city/city.service';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { AddressEntity } from './entities/address.entity';
 import { Repository } from 'typeorm';
-import { CreateAddressDto } from './dtos/createAddress.dto';
 import { UserService } from 'src/user/user.service';
 
 @Injectable()
@@ -19,6 +19,8 @@ export class AddressService {
     createAddressDto: CreateAddressDto,
     userId: number,
   ): Promise<AddressEntity> {
+    // TODO: Revalidar o throw exception pois não está travando e dando outro erro
+    // Tanto do usuário quanto da cidade.
     await this.userService.findUserById(userId);
 
     await this.cityService.findCityById(createAddressDto.cityId);
