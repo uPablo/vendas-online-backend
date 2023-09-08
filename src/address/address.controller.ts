@@ -2,7 +2,6 @@ import { CreateAddressDto } from './dtos/createAddress.dto';
 import {
   Body,
   Controller,
-  Param,
   Post,
   UsePipes,
   ValidationPipe,

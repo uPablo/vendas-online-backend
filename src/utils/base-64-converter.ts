@@ -1,6 +1,6 @@
 import { LoginPayload } from 'src/auth/dtos/loginPayload.dto';
 
-export const authorizantionToLoginPayload = (
+export const authorizationToLoginPayload = (
   authorization: string,
 ): LoginPayload | undefined => {
   const authorizationSplited = authorization.split('.');
