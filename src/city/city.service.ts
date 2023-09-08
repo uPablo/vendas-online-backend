@@ -26,4 +26,16 @@ export class CityService {
 
     return (await data).flat();
   }
+
+  async findCityById(cityId: number): Promise<CityEntity> {
+    const city = this.cityRepository.findOne({
+      where: {
+        id: cityId,
+      },
+    });
+
+    if (!city) throw new Error(`CityId: ${cityId} not found`);
+
+    return city;
+  }
 }
