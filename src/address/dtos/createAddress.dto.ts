@@ -1,14 +1,16 @@
-import { AddressEntity } from '../entities/address.entity';
+import { IsInt, IsOptional, IsString } from 'class-validator';
 
 export class CreateAddressDto {
+  @IsString()
+  @IsOptional()
   complement: string;
-  numberAddress: number;
-  cep: string;
-  cityId: number;
 
-  constructor(address: AddressEntity) {
-    this.complement = address.complement;
-    this.numberAddress = address.numberAddress;
-    this.cep = address.cep;
-  }
+  @IsInt()
+  numberAddress: number;
+
+  @IsString()
+  cep: string;
+
+  @IsInt()
+  cityId: number;
 }
