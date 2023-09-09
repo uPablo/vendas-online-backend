@@ -322,7 +322,7 @@ export class InsertInCity1694115353402 implements MigrationInterface {
             INSERT INTO city("id", "name", "state_id") VALUES (317, 'Barra do Rocha', 5);
             INSERT INTO city("id", "name", "state_id") VALUES (318, 'Barreiras', 5);
             INSERT INTO city("id", "name", "state_id") VALUES (319, 'Barro Alto', 5);
-            INSERT INTO city("id", "name", "state_id") VALUES (320, 'Barro Preto INSERT INTO city("id", "name", "state_id") VALUES (antigo Gov. Lomanto Jr.);', 5);
+            INSERT INTO city("id", "name", "state_id") VALUES (320, 'Barro Preto', 5); 
             INSERT INTO city("id", "name", "state_id") VALUES (321, 'Barrocas', 5);
             INSERT INTO city("id", "name", "state_id") VALUES (322, 'Belmonte', 5);
             INSERT INTO city("id", "name", "state_id") VALUES (323, 'Belo Campo', 5);
