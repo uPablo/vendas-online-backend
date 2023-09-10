@@ -3,7 +3,7 @@ import { CityEntity } from './entities/city.entity';
 import { Injectable } from '@nestjs/common';
 
 import { Repository } from 'typeorm';
-import { CacheService } from 'src/cache/cache.service';
+import { CacheService } from '../cache/cache.service';
 
 @Injectable()
 export class CityService {
