@@ -9,7 +9,7 @@ describe('UserController', () => {
       controllers: [UserController],
     }).compile();
 
-    controller = module.get<UserController>(UserController);
+    controller = await module.get<UserController>(UserController);
   });
 
   it('should be defined', () => {

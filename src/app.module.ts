@@ -48,7 +48,7 @@ import { UserService } from './user/user.service';
       provide: APP_GUARD,
       useClass: RolesGuard,
     },
-    UserService,
+    // UserService,
   ],
 })
 export class AppModule {}
